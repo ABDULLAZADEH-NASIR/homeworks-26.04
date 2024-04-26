@@ -1,0 +1,49 @@
+
+1.Hazir metoddan istifade etmeden, verilen Stringi tersine ceviren bir metod yazin (StringBuilder istifade edin)
+
+
+public class Main{
+    public static void main(String[] args) {
+
+      String verilen="Java";
+     StringiTersineCevirmek(verilen);
+
+    }
+    public static void StringiTersineCevirmek(String verilen) {
+    StringBuilder stringBuilder = new StringBuilder();
+    for (int i = verilen.length() - 1; i >= 0; i--) {
+        stringBuilder.append(verilen.charAt(i));
+    }
+    System.out.println(stringBuilder);
+    }
+}
+
+
+
+2. Verilen Stringin polindrom olub olmadigini yoxlayan metod yazin (StringBuilder istifade edin)
+
+
+import javax.management.StringValueExp;
+
+public class Main{
+    public static void main(String[] args) {
+
+     String verilen="Garage";
+     PolidromOlubOlmadiginiYoxlamag(verilen);
+    }
+    public static void PolidromOlubOlmadiginiYoxlamag (String verilen){
+        StringBuilder verileninTersi=new StringBuilder();
+        for (int i=verilen.length()-1;i>=0;i--){
+            verileninTersi.append(verilen.charAt(i));
+        }
+
+        if(verilen.equalsIgnoreCase(String.valueOf(verileninTersi))){
+            System.out.println("Verilen Strong Polidromdur ");
+        }
+        else {
+            System.out.println("Verilen String Polidrom deyil ");
+        }
+
+    }
+}
+
